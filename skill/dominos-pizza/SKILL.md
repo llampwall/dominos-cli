@@ -1,11 +1,6 @@
 ---
-description: Order Domino's pizza from configured presets using the dominos-cli tool
-triggers:
-  - dominos
-  - pizza
-  - order pizza
-  - track pizza
-  - pizza order
+name: dominos-pizza
+description: Use to order or track Domino's pizza from configured presets using the dominos-cli tool
 ---
 
 # Dominos Pizza Ordering
