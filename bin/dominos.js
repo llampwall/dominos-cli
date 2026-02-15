@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import ConfigManager from '../src/config-manager.js';
 import { configShow, configEdit, configValidate, configSetup } from '../src/commands/config.js';
+import { orderCommand } from '../src/commands/order.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -23,9 +24,7 @@ program
 program
   .command('order <preset>')
   .description('Order pizza from a preset')
-  .action((preset) => {
-    console.log(`Order command: ${preset}`);
-  });
+  .action(orderCommand);
 
 const configCommand = program
   .command('config')
