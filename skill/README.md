@@ -19,7 +19,11 @@ dominos config setup
 dominos config edit
 ```
 
-4. Install this skill in Claude Code (copy to `~/.claude/skills/dominos/`)
+4. Install this skill in Claude Code:
+```bash
+# Copy the skill file to your Claude skills directory
+cp skill/dominos.md ~/.claude/skills/dominos.md
+```
 
 ## Usage
 
