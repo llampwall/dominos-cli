@@ -7,7 +7,8 @@ import { NearbyStores } from 'dominos';
 
 class SetupWizard {
   constructor() {
-    this.rl = readline.createInterface({ input, output });
+    // Readline interface will be created in run() to avoid hanging tests
+    this.rl = null;
   }
 
   static validateAddress(address) {
@@ -53,6 +54,9 @@ class SetupWizard {
   }
 
   async run() {
+    // Create readline interface here instead of constructor
+    this.rl = readline.createInterface({ input, output });
+
     console.log(chalk.blue('\n👋 Welcome to Dominos CLI!\n'));
     console.log('No configuration found. Let\'s set up your account.\n');
 
