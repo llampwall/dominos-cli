@@ -1,0 +1,26 @@
+{
+  "name": "dominos",
+  "description": "Order Domino's pizza from configured presets",
+  "version": "1.0.0",
+  "author": "dominos-cli",
+  "commands": {
+    "order": {
+      "description": "Order pizza from a preset",
+      "usage": "/dominos order <preset>",
+      "execute": "dominos order ${args}"
+    },
+    "track": {
+      "description": "Track your order status",
+      "usage": "/dominos track [phone]",
+      "execute": "dominos track ${args}"
+    },
+    "config": {
+      "description": "Manage configuration",
+      "usage": "/dominos config <subcommand>",
+      "execute": "dominos config ${args}"
+    }
+  },
+  "setup": {
+    "instructions": "Install dominos-cli globally with: npm install -g dominos-cli\n\nThen run the setup wizard: dominos config setup"
+  }
+}
