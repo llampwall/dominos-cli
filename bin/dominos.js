@@ -7,6 +7,7 @@ import { dirname, join } from 'path';
 import ConfigManager from '../src/config-manager.js';
 import { configShow, configEdit, configValidate, configSetup } from '../src/commands/config.js';
 import { orderCommand } from '../src/commands/order.js';
+import { trackCommand } from '../src/commands/track.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -65,8 +66,6 @@ configCommand
 program
   .command('track [phone]')
   .description('Track order status')
-  .action((phone) => {
-    console.log(`Track command: ${phone || 'from config'}`);
-  });
+  .action(trackCommand);
 
 program.parse();
